@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 90px;
+            background-image: url(logo.jpeg);
+            background-size: contain; 
+            background-position: center; 
+            background-repeat: repeat; 
+        }
+
+        .hogwart {
+            background-color: #ab865f;
+            color: white;
+            padding: 10px;
+            margin-left: 20%;
+            margin-right: 20%;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        h1 {
+            margin: 0;
+
+        }
+
+        form {
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 40px;
+            margin: 20px;
+            margin-left: 15%;
+            margin-right: 15%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        legend {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        button {
+            background-color: #ab865f;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        button:hover {
+            background-color: #cf9d5b;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.8em;
+            color: #777;
+        }
+
+        table {
+            width: 90%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #ab865f;
+            color: white;
+        }
+
+        img {
+            display: block;
+            margin: 10px auto;
+        }
+
+        iframe {
+            display: block;
+            margin: 10px auto;
+        }
+
+    </style>
+</head>
+<body>
+
+  
+        <h1 class="hogwart"><b>Hogwarts Application Form</b></h1>
+   
+    <form action="process_registration.php" method="POST" enctype="multipart/form-data"> <br>
+        <div>
+            <legend><b>Enter your admission information below</b></legend><br>   
+            <label for="name"><b>Name:</b></label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="gender"><b>Gender:</b></label>
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label>
+            <input type="radio" id="non-binary" name="gender" value="Non-binary">
+            <label for="non-binary">Non-binary</label><br><br>
+
+            <label for="age"><b>Age:</b></label>
+            <input type="number" id="age" name="age" required> <br><br>
+
+            <label for="birthdate"><b>Birthdate:</b></label>
+            <input type="date" id="birthdate" name="birthdate" min="1900-01-01" max="2023-12-31"><br><br>
+
+            <label for="bloodtype"><b>Blood type:</b></label><br>
+            <input type="checkbox" id="bloodtype1" name="bloodtype[]" value="Pure-blood">
+            <label for="bloodtype1">Pure-blood</label> <br>
+            <input type="checkbox" id="bloodtype2" name="bloodtype[]" value="Half-blood">
+            <label for="bloodtype2">Half-blood </label> <br>
+            <input type="checkbox" id="bloodtype3" name="bloodtype[]" value="Muggle">
+            <label for="bloodtype3">Muggle-born</label> <br><br>
+
+            <div class="form-group">
+                <label for="house"><b>Preferred House:</b></label>
+                <select id="house" name="house" multiple>
+                    <option value="gryffindor">Gryffindor</option>
+                    <option value="hufflepuff">Hufflepuff</option>
+                    <option value="ravenclaw">Ravenclaw</option>
+                    <option value="slytherin">Slytherin</option>
+                </select>
+            </div><br>
+        </div>
+
+            <label for="contact-number"><b>Contact number:</b></label>
+            <input type="number" id="contact-number" name="contact_number" required><br><br>
+
+            <label for="email"><b>Email:</b></label>
+            <input type="email" id="email" name="email" required><br><br>
+       
+        
+        <br>
+        <hr>
+        <br>
+        <section>
+            <legend><b>Subjects</b></legend>
+            <label for="classes"><b>Mandatory classes:</b></label>
+            <ul>
+                <li>Charms</li>
+                <li>Defense Against the Dark Arts</li>
+                <li>Potions</li>
+                <li>Transfiguration</li>
+                <li>History of Magic</li>
+            </ul>
+
+            <label for="quidditch"><b>Which position do you want to play in Quidditch?</b></label><br> 
+            <input type="radio" id="seeker" name="quidditch_position" value="Seeker">
+            <label for="seeker">Seeker</label>
+            <input type="radio" id="beater" name="quidditch_position" value="Beater">
+            <label for="beater">Beater</label><br>
+            <input type="radio" id="keeper" name="quidditch_position" value="Keeper">
+            <label for="keeper">Keeper</label>
+            <input type="radio" id="chaser" name="quidditch_position" value="Chaser">
+            <label for="chaser">Chaser</label><br><br>
+
+            <br>
+            <legend><b>Additional Information</b></legend><br>
+            <table border="1">
+                <tr>
+                    <th>Elective Subject</th>
+                    <th>Take this subject</th>
+                </tr>
+                <tr>
+                    <td>Charms</td>
+                    <td><input type="checkbox" name="fav_subjects[]" value="Charms"></td>
+                </tr>
+                <tr>
+                    <td>Defense Against the Dark Arts</td>
+                    <td><input type="checkbox" name="fav_subjects[]" value="Defense Against the Dark Arts"></td>
+                </tr>
+                <tr>
+                    <td>Potions</td>
+                    <td><input type="checkbox" name="fav_subjects[]" value="Potions"></td>
+                </tr>
+                <tr>
+                    <td>Transfiguration</td>
+                    <td><input type="checkbox" name="fav_subjects[]" value="Transfiguration"></td>
+                </tr>
+                <tr>
+                    <td>History of Magic</td>
+                    <td><input type="checkbox" name="fav_subjects[]" value="History of Magic"></td>
+                </tr>
+            </table>
+        </section>
+        <br>
+
+        <img src="hogwarts.webp" width="400" height="150" title="hogwarts">
+        <img src="shouts-harry-potter.webp" width="400" height="150" title="friends">
+        <iframe width="400" height="150" src="https://www.youtube.com/embed/Qgr4dcsY-60" title="It’s Leviosa, Not Leviosaaa!  | Harry Potter and the Philosopher’s Stone" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <br><br>
+
+        <fieldset>
+            <legend><b>NOTE</b></legend>
+            <p>"Make sure you're crystal clear. First-year students can't ride on a broomsticks!"</p> <br>
+            <input type="checkbox" id="understand" name="understand" required>
+            <label for="understand">I totally understand</label><br>
+        </fieldset><br>
+
+        <button type="submit" name="submit" value="Register">Submit</button>
+
+        <br><br>
+        <footer>
+            <p>&copy; 2024 CuregMarlyn. All rights reserved.</p>
+        </footer>
+
+    </form>
+</body>
+</html>
