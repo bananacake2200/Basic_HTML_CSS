@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 20: BEM</title>
+    <style>
+            
+        body {
+        background-image: url(hog.jpg);
+        background-size: cover;
+        }
+
+        .card {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 300px;
+            margin: 60px auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+      
+        .card__header {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 15px;
+        }
+
+        .card__image {
+            width: 100%;
+            height: 200px;
+            border-radius: 5px;
+        }
+
+        .card__description {
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: #000000;
+        }
+
+        .button {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        .button--primary {
+            background-color: #825B32;
+        }
+
+        .card--highlight {
+            background-color: #fef9c3;
+            border-color: #825B32;
+        }
+
+        @media (min-width: 768px) {
+            .card--large {
+                max-width: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card card--highlight card--large">
+        <div class="card__header"><center>Hogwarts School of Witchcraft and Wizardry</center></div><br>
+        <img src="houses.jpg" alt="Hogwarts" class="card__image">
+        <p class="card__description">Welcome to the most magical place in the world! Within these ancient walls, you'll master spells, brew potions, and uncover secrets hidden in the castle. Whether you’re exploring the Forbidden Forest, practicing with your housemates, or learning from legendary professors, Hogwarts will be your home for the next seven years. Magic and adventure await at every corner—so grab your wand, embrace the unknown, and let the journey begin!</p>
+        <a href="html/basic.html" class="button button--primary">Enroll Now</a>
+    </div>
+
+</body>
+</html>
