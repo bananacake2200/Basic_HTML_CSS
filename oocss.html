@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 21: OOCSS</title>
+    <style>
+
+        header{
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 30px;
+            background-color: #fffcfc;
+            color: #0f0f0f;
+            font-size: 20px;
+            
+        }
+    
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #fffcfc;
+            color: #333;
+        }
+
+        h1, h2 {
+            margin: 0 0 10px 0;
+            color: #0c0c0c;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .box {
+            background-color: #fff;
+            border-radius: 1px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .grid {
+           margin-left: 10%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            width:25%;
+            border: 1px solid #000000;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            text-align: center;
+            background-color: #FFB0B0;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+        }
+
+        .button--second {
+            background-color: #b384be;
+        }
+        .button--third {
+            background-color: #87A2FF;
+        }
+
+        .card__image {
+            width: 100%;
+            height: 150px;
+        }
+
+        .card__content {
+            padding: 15px;
+        }
+
+        .card__header {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .card__description {
+            font-size: 1em;
+            color: #484646;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Sanrio's space</h1>
+        <p>Welcome to the World of Sanrio!
+            Step into a universe of cuteness, friendship, and joy with Sanrio! Here, you'll discover beloved characters like Hello Kitty, Cinnamoroll, and Kuromi, each bringing their own charm and magic to brighten your day. </p>
+    </header>
+
+    <section class="grid">
+        <div class="box card">
+            <div class="card__image">
+                <img src="hello kitty.webp" alt="Kuromi Image" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="card__content">
+                <h2 class="card__header">Hello Kitty</h2>
+                <p class="card__description">Hello Kitty is a sweet, playful character known for her iconic red bow and kind heart. With her simple yet charming style, she brings happiness and warmth wherever she goes. Born in London, she loves baking cookiees. Hello Kitty is a symbol of friendship, joy, and love for fans all over the world!</p><br>
+                <a href="https://youtube.com/playlist?list=PLN9X97LDR0XuH5iW6C4AAsiEDNMNke_Ks&si=0z7hOjdwebXLTc0W" class="button">View series</a>
+            </div>
+        </div>
+        <div class="box card">
+            <div class="card__image">
+                <img src="kuromi.webp" alt="Kuromi Image" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="card__content">
+                <h2 class="card__header">Kuromi</h2>
+                <p class="card__description">Kuromi is a mischievous and energetic character with a punk-rock edge. Known for her black jester's hat and signature pink skull, she's full of attitude but has a soft spot for cute things. Though she may appear tough, Kuromi is playful, spirited, and loves adding a bit of fun and chaos to every adventure!</p><br>
+                <a href="https://youtube.com/playlist?list=PLN9X97LDR0XuIxAeg6KUbA2mZ-nFlrBFQ&si=OK28x27cv0uuo7gj" class="button button--second">View series</a>
+            </div>
+        </div>
+        
+        <div class="box card">
+            <div class="card__image">
+                <img src="Cinnamoroll.webp" alt="Kuromi Image" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="card__content">
+                <h2 class="card__header">Cinnamoroll</h2>
+                <p class="card__description"> Cinnamoroll is an adorable, fluffy puppy with long, floppy ears that help him fly through the sky. With his snow-white fur, big blue eyes, and curly tail, he's as sweet as a cloud. Friendly and shy, Cinnamoroll loves to nap on fluffy cushions and enjoys making new friends while spreading joy wherever he goes!</p><br>
+                <a href="https://youtu.be/-k8mCdTmbPQ?si=V2Y_G9rMcZnSNERs" class="button button--third">View series</a>
+            </div>
+        </div>
+        
+    </section>
+
+
+</body>
+</html>
